@@ -1,8 +1,8 @@
 # README
 
-This extension converts Python byte arrays to their equivalent strings. The extension has been developed mainly to assist in manual decompilation of Python bytecode where strings have been obfuscated by converting them to bytearray equivalents.
+This is a vscode extension to convert Python byte arrays to their string equivalent. The extension has been developed mainly to assist in manual decompilation of Python bytecode where strings have been obfuscated by converting them to bytearray equivalents.
 
-For example, extension converts the block of code
+For example, the extension converts the block of code
 ```
 bytearray([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]).decode()
 ```
@@ -14,7 +14,7 @@ The extension can be installed by using the "Install fromn VSIX" option in vscod
 
 First select a block of text containing one or multiple such patterns. Then press <kbd>Alt</kbd> + <kbd>`</kbd> to trigger the extension.
 
-The extension works using regular expression to match and replace such patterns with their string equivalents. The exact list of regexps scanned for can be found in src/extension.ts
+The extension works using regular expression to match and replace such patterns. The exact list of regexps scanned for can be found in src/extension.ts
 
 ## Development notes
 
