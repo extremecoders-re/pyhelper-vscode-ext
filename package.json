@@ -1,0 +1,52 @@
+{
+    "name": "pyhelper",
+    "displayName": "pyhelper",
+    "description": "Converts python byte arrays to their equivalent strings",
+    "version": "0.1.0",
+    "publisher": "extremecoders-re",
+	"repository": "https://github.com/extremecoders-re/pyhelper-vscode-ext",
+    "engines": {
+        "vscode": "^1.79.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "pyhelper.stringify",
+                "title": "Stringify byte array"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "pyhelper.stringify",
+                "key": "alt+`",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "package": "./node_modules/@vscode/vsce/vsce package"
+    },
+    "devDependencies": {
+        "@types/glob": "^8.1.0",
+        "@types/mocha": "^10.0.1",
+        "@types/node": "20.2.5",
+        "@types/vscode": "^1.79.0",
+        "@typescript-eslint/eslint-plugin": "^5.59.8",
+        "@typescript-eslint/parser": "^5.59.8",
+        "@vscode/vsce": "^2.19.0",
+        "eslint": "^8.41.0",
+        "glob": "^8.1.0",
+        "mocha": "^10.2.0",
+        "typescript": "^5.1.3"
+    }
+}
